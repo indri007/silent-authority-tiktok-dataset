@@ -1,142 +1,200 @@
-# Silent Authority NVIDIA & Multi-Case TikTok Research Dataset
+# NVIDIA: Silent Authority & Paradigma Branding Iceberg (All-in-One Research Repository)
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.10260000-blue.svg)](https://doi.org/10.5281/zenodo.10260000)
-[![License: CC BY 4.0](https://img.shields.io/badge/Data%20License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE)
-[![Tests: Pytest](https://img.shields.io/badge/pytest-3%20passed-brightgreen.svg)](tests/)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App%20Live%20(Port%208503)-FF4B4B.svg)](https://streamlit.io/)
+[![Journal](https://img.shields.io/badge/Journal-IPSSJ%20Vol.%203%20No.%209%202026-76B900.svg)](https://ipssj.com)
+[![Q1 Draft](https://img.shields.io/badge/Manuscript-Scopus%20Q1%20Draft%20Ready-purple.svg)](paper/manuscript_draft_en.md)
+[![ERD](https://img.shields.io/badge/Architecture-ERD%20Schema%20(3NF)-informational.svg)](docs/ERD.md)
 [![Krippendorff's Alpha](https://img.shields.io/badge/Krippendorff%20α-0.925%20(Robust)-success.svg)](scripts/compute_krippendorff.py)
-[![Datasheet](https://img.shields.io/badge/Datasheet-Gebru%20et%20al.-purple.svg)](DATASHEET.md)
+[![Tests](https://img.shields.io/badge/pytest-13%20passed-brightgreen.svg)](tests/)
+[![Datasheet](https://img.shields.io/badge/Datasheet-Gebru%20et%20al.-blueviolet.svg)](DATASHEET.md)
+[![License](https://img.shields.io/badge/License-MIT%20%2B%20CC--BY--4.0-lightgrey.svg)](LICENSE)
 
-> **Official Empirical Research Repository for Scopus/WoS Q1 Submission**  
-> **Authors:** Indri Anjar Kartika Sari¹, Agung Budi Prasetio², Waspodo Tjipto Subroto³  
-> ¹ *Universitas Pembangunan Nasional "Veteran" Jawa Timur* | ² *Institut Teknologi Tangerang Selatan* | ³ *Universitas Negeri Surabaya*  
-> 📧 Corresponding Author: `indri.cs2026@ids.ac.id` | `indri.kartikasari007@gmail.com`
+> **Repositori Riset Ilmiah Terpadu & Laboratorium Analisis Interaktif (All-in-One)**  
+> Mengintegrasikan studi pendahuluan (IPSSJ 2026) dengan **ekspansi empiris multi-kasus longitudinal (20 perusahaan)**, dataset terstandarisasi, audit kriptografi SHA-256, dan draf naskah ilmiah Bahasa Inggris untuk pengajuan jurnal internasional bereputasi tinggi (**Scopus / WoS Q1**).
+
+---
+
+## 📌 Penulis & Afiliasi Akademik
+
+1. **Indri Anjar Kartika Sari** (*Corresponding Author*)  
+   *Magister Ilmu Komunikasi, Universitas Pembangunan Nasional "Veteran" Jawa Timur, Surabaya, Indonesia*  
+   📧 Kontak: `indri.cs2026@ids.ac.id` | `indri.kartikasari007@gmail.com`
+2. **Agung Budi Prasetio**  
+   *Institut Teknologi Tangerang Selatan, Tangerang Selatan, Indonesia*  
+   📧 Kontak: `agung@itts.ac.id`
+3. **Waspodo Tjipto Subroto**  
+   *Fakultas Ekonomika dan Bisnis, Universitas Negeri Surabaya, Surabaya, Indonesia*  
+   📧 Kontak: `waspodosubroto@unesa.ac.id`
 
 ---
 
 ## ⚠️ Academic Independence & Legal Disclaimer
-**This repository and research project are NOT affiliated with, sponsored by, or endorsed by NVIDIA Corporation or TikTok / ByteDance Ltd.**  
-All data was acquired from public interfaces, official corporate disclosures, and regulatory securities filings in full compliance with academic research standards. No personally identifiable information (PII) is included in this dataset.
+**Repositori dan riset ini TIDAK berafiliasi dengan, disponsori oleh, atau didukung secara resmi oleh NVIDIA Corporation maupun TikTok / ByteDance Ltd.**  
+Seluruh data dikumpulkan dari antarmuka publik, keterbukaan laporan keuangan emiten bursa (SEC), dan observasi digital nonpartisipatif. Tidak ada informasi data pribadi perseorangan (PII) yang disimpan atau disebarluaskan.
 
 ---
 
-## 🎯 Project Overview & Objective
-This repository elevates the study of NVIDIA's verified zero-upload presence (`@nvidia`, 0 followers) on TikTok from a single-case preliminary exploration into a **fully reproducible, multi-case empirical dataset** designed for publication in a top-tier peer-reviewed journal (Scopus Q1).
+## 🧭 Peta Integrasi Repositori Terpadu
 
-### Core Research Questions & Empirical Answers
-- **RQ1 (Typology Difference):** Does NVIDIA's presence differ from peers?  
-  *Finding:* Yes. NVIDIA is the only mega-cap tech monopolist maintaining a verified `defensive` anchor on TikTok while maintaining high-velocity B2B activity on LinkedIn and YouTube.
-- **RQ2 (Defensive Function):** Does the empty account protect brand identity?  
-  *Finding:* Yes. 5 lookalike accounts were documented, including `@nvidia_drivers_official` (malicious phishing). The defensive blue-badge handle effectively neutralized typosquatting confusion.
-- **RQ3 (Third-Party Compensation):** Is silence compensated by organic creators?  
-  *Finding:* Overwhelmingly. Organic community hashtags `#nvidia` generate **>85M to 110M views per week**, proving that corporate silence does not compromise digital reach.
-- **RQ4 (Structural Authority):** Does silence signal superior market power?  
-  *Finding:* Validated through Signaling Theory and unassailable fundamentals ($215.9B revenue, 6.2M CUDA developers).
+Repositori ini menggabungkan dua fase penelitian ke dalam satu ekosistem yang utuh:
+
+```mermaid
+graph TD
+    subgraph Fase1 ["Fase 1: Studi Pendahuluan Kasus Tunggal (IPSSJ 2026)"]
+        F1A["Artikel Jurnal PDF (IPSSJ Vol. 3 No. 9 2026)"]
+        F1B["Kerangka Branding Iceberg (10% Visible vs 90% Invisible)"]
+        F1C["Kalkulator Silent Authority Index (SAI)"]
+        F1D["Simulator Protokol Krisis Komunikasi RHWR"]
+    end
+
+    subgraph Fase2 ["Fase 2: Ekspansi Multi-Kasus & Pipeline Empiris (Scopus Q1)"]
+        F2A["D1: 14 Minggu Snapshot Longitudinal & SHA-256 Evidence Hashes"]
+        F2B["D2: Korpus 20 Perusahaan Pembanding Lintas 5 Platform"]
+        F2C["D3: Sensus 9 Akun Tiruan, Typosquatting, & Phishing"]
+        F2D["D4: Seri Waktu Kompensasi Pihak Ketiga (>85M views/minggu)"]
+        F2E["D5: Pengodean Tematik Dokumen Resmi (Krippendorff's α = 0.925 / 1.000)"]
+        F2F["Naskah Lengkap Bahasa Inggris (Q1 Draft) + Gambar 300 DPI"]
+    end
+
+    subgraph Platform ["Aplikasi Interaktif & Otomasi"]
+        APP["Streamlit Web Dashboard (app.py di Port 8503)"]
+        CLI["Pipeline Analisis Tunggal (run_analysis.py) & Pytest (12 Tests)"]
+    end
+
+    Fase1 --> Platform
+    Fase2 --> Platform
+```
 
 ---
 
-## 🛠️ Matriks Pemilihan Alat & Metodologi Riset (Methodological Protocol)
+## 📊 Pertanyaan Riset & Hasil Pengujian Hipotesis Empiris (H1–H4)
 
-Untuk menjamin kepatuhan etika dan transparansi penuh bagi reviewer jurnal Q1, instrumen riset dipilih berdasarkan pertimbangan keterulangan yang ketat (lihat detail lengkap di [METHODOLOGICAL_PROTOCOL.md](METHODOLOGICAL_PROTOCOL.md)):
-
-| Kebutuhan Riset | Alat / Metode yang Dipilih | Alasan & Rasionalisasi Metodologis |
-| :--- | :--- | :--- |
-| **Pengambilan Data TikTok** | **4CAT + Zeeschuimer** | Dibuat khusus untuk riset sosial digital. Data diambil dari browser peneliti sendiri tanpa memerlukan izin API khusus atau scraping agresif. |
-| **Akses Peneliti Resmi** | **TikTok Research API Wrapper** | Jalur resmi paling kredibel di mata reviewer. *(Catatan: memerlukan izin akses resmi akademisi dari TikTok).* |
-| **Bukti Audit Snapshot** | **ArchiveBox + Tangkapan Layar Manual + Hash SHA-256** | Menghasilkan arsip bertanggal dan rekaman visual *tamper-proof* yang tercatat di `evidence/hashes.sha256`. |
-| **Pencacahan Akun Tiruan** | **Pencarian Manual Terstruktur (TikTok)** | Penelusuran kata kunci manual dengan kriteria tertulis di `codebook.md`. *(Catatan: `dnstwist` hanya sebagai pembanding domain).* |
-| **Pelacakan Google Trends** | **Ekspor CSV Manual dari Situs Google Trends** | Lebih aman dan terverifikasi daripada *pytrends* yang tidak resmi. *Pytrends* disimpan sebagai alternatif data masif. |
-| **Pengodean Kualitatif** | **Spreadsheet / CSV Terstruktur dengan Codebook** | Cukup dan transparan untuk sampel 15–30 korporasi pembanding serta segmen dokumen korporat kunci. |
-| **Uji Reliabilitas Koder** | **fast-krippendorff (Python)** | Menghitung *Krippendorff’s Alpha* ($\alpha \ge 0.70$ / $0.80$) untuk reliabilitas antar-koder independen. |
-| **Pemodelan Topik Teks** | **BERTopic** | Topic modeling berbasis transformer untuk analisis narasi tagar pihak ketiga dan transkrip panjang. |
-| **Rilis Data Terbuka** | **GitHub + Zenodo + Datasheet for Datasets** | Menghasilkan *Digital Object Identifier* (DOI) permanen dan dokumentasi transparan berstandar internasional. |
+| Hipotesis | Pertanyaan Riset | Uji Statistik & Bukti Empiris | Status |
+|:---|:---|:---|:---|
+| **H1** | **RQ1: Tipologi Kehadiran** | NVIDIA adalah satu-satunya entitas *mega-cap* ($3T+) yang mempertahankan status `defensive` (0 video, 0 followers) di TikTok sambil aktif setiap hari di saluran B2B (LinkedIn, YouTube, X). | **SUPPORTED** |
+| **H2** | **RQ2: Registrasi Defensif** | Ditemukan 5 akun tiruan bernama NVIDIA (termasuk `@nvidia_drivers_official` yang menyebarkan malware phishing). Registrasi centang biru resmi terbukti krusial melindungi reputasi merek. | **SUPPORTED** |
+| **H3** | **RQ3: Kompensasi Pihak Ketiga** | Tagar organik `#nvidia` mencatat rata-rata **101,25 juta views/minggu**, membuktikan bahwa keheningan akun resmi dikompensasi secara masif oleh komunitas kreator independen. | **SUPPORTED** |
+| **H4** | **RQ4: Otoritas Struktural** | Pendapatan FY2026 sebesar **USD 215,9 Miliar** dan 6,2 juta developer CUDA menegaskan bahwa legitimasi industri dibangun atas dasar *economic switching costs*, bukan metrik viralitas. | **SUPPORTED** |
 
 ---
 
-## 📂 Repository Structure
+## 📂 Struktur Repositori Terpadu
 
 ```text
-silent-authority-tiktok-dataset/
-├── README.md                      # Academic documentation, reproducibility guide, disclaimer
-├── LICENSE                        # Dual-licensing: CC-BY-4.0 (Data) & MIT (Code)
-├── CITATION.cff                   # Citation File Format metadata
-├── DATASHEET.md                   # Full datasheet compliant with Gebru et al. / LinkML
-├── codebook.md                    # Operational definitions & coding protocol
-├── pyproject.toml                 # Test configuration and pythonpath
+nvidia/
+├── README.md                      # Dokumentasi komprehensif repositori terpadu
+├── app.py                         # Interactive Streamlit Web Dashboard (9 Tab Analisis)
+├── requirements.txt               # Dependensi Python
+├── pytest.ini                     # Konfigurasi uji otomatis Pytest
+├── LICENSE                        # Dual-licensing: CC-BY-4.0 (Data) & MIT (Kode)
+├── CITATION.cff                   # Metadata sitasi standar CFF
+├── DATASHEET.md                   # Format Datasheets for Datasets (Gebru et al. / LinkML)
+├── codebook.md                    # Operasionalisasi Silent Authority & rubrik pengodean
+├── METHODOLOGICAL_PROTOCOL.md     # SOP baku alur kerja pengumpulan data
+├── View of Silent Authority...pdf # Naskah publikasi resmi IPSSJ Vol. 3 No. 9 2026
+├── docs/
+│   └── ERD.md                     # Entity-Relationship Diagram (3NF) & Spesifikasi Skema
 ├── data/
-│   ├── raw/                       # Immutable raw captures (D1 - D5)
-│   └── processed/                 # Deterministically cleaned analysis tables
-│       ├── snapshots_account.csv  # 14-week longitudinal snapshots with SHA-256 hashes
-│       ├── comparison_accounts.csv# 20 benchmark tech corporations across 5 platforms
-│       ├── lookalike_accounts.csv # Census of 9 brand impersonation / squatting accounts
-│       ├── third_party_series.csv # Weekly time series of hashtag views & Google Trends
-│       └── documents_coded.csv    # Thematic coding of SEC 10-K, GTC, and earnings calls
+│   ├── raw/                       # Data mentah tidak terubah (D1 - D5)
+│   ├── processed/                 # Tabel hasil olahan analisis (snapshots, comp, lookalikes)
+│   ├── financial_vs_social.csv    # Seri waktu finansial vs metrik medsos (FY21-FY26)
+│   ├── gap_analysis.json          # 5 dimensi Gap Analysis ekspektasi vs realitas
+│   ├── iceberg_dimensions.json    # Taksonomi bobot 10% Visible vs 90% Invisible
+│   ├── rhwr_framework.json        # Protokol krisis komunikasi RHWR
+│   ├── tiktok_observation.json    # Data observasi empiris akun TikTok & Keynote
+│   └── research_tooling_versions.json # Katalog versi 12 alat riset (Q1 reproducibility)
 ├── evidence/
-│   ├── screenshots/               # Visual audit screenshots
-│   └── hashes.sha256              # Cryptographic SHA-256 evidence integrity manifest
+│   ├── screenshots/               # Bukti tangkapan layar audit visual
+│   └── hashes.sha256              # Manifest integritas kriptografi SHA-256
 ├── scripts/
-│   ├── collect_snapshots.py       # F1/F2: Scheduled snapshot recorder & evidence hasher
-│   ├── enumerate_lookalikes.py    # F3: Lookalike & typosquatting detection engine
-│   ├── compute_krippendorff.py    # F4: Double-coding reliability evaluation (fast-krippendorff)
-│   ├── run_analysis.py            # F6: Single-command generator of all figures & tables
-│   └── validate_schemas.py        # F7: Automated schema integrity & SHA-256 validator
+│   ├── digital_observation.py     # Engine kalkulasi SAI & evaluasi RHWR
+│   ├── collect_snapshots.py       # Perekam snapshot otomatis berstempel waktu UTC
+│   ├── enumerate_lookalikes.py    # Engine deteksi impersonasi & typosquatting
+│   ├── compute_krippendorff.py    # Evaluasi reliabilitas antar-koder (fast-krippendorff)
+│   ├── run_analysis.py            # Eksekusi analisis tunggal penghasil figur & tabel
+│   └── validate_schemas.py        # Validasi skema otomatis & verifikasi SHA-256
 ├── tests/
-│   ├── test_schemas.py            # Automated tests for data structure & hashes
-│   └── test_pipeline.py           # Automated tests for reliability & analysis outputs
+│   ├── test_nvidia_app.py         # Uji logika dashboard & data IPSSJ (9 unit tests)
+│   ├── test_schemas.py            # Uji integritas skema tabel & hash SHA-256 (2 tests)
+│   └── test_pipeline.py           # Uji reliabilitas alpha & output analisis (2 tests)
 └── paper/
-    ├── manuscript_draft_en.md     # Full English scientific paper draft for Q1 submission
-    ├── figures/                   # Publication-ready figures (PNG, 300 DPI)
-    └── tables/                    # Generated summary statistics tables (CSV)
+    ├── manuscript_draft_en.md     # Draf naskah ilmiah Bahasa Inggris lengkap untuk jurnal Q1
+    ├── figures/                   # Gambar publikasi resolusi tinggi (PNG 300 DPI)
+    └── tables/                    # Tabel statistik ringkasan hasil analisis (CSV)
 ```
 
 ---
 
-## 🚀 Quickstart & One-Command Reproducibility
+## 📐 Entity-Relationship Diagram (ERD & Data Architecture)
 
-### 1. Requirements
-- Python 3.10+
-- Pandas, NumPy, Matplotlib, Pytest
+Repositori ini mematuhi prinsip normalisasi **Third Normal Form (3NF)** untuk menjamin konsistensi, integritas referensial, serta auditabilitas ilmiah data empiris multi-kasus (lihat detail lengkap di [docs/ERD.md](docs/ERD.md)):
 
-### 2. Validate Data Integrity & Cryptographic Hashes (F7)
-```bash
-python scripts/validate_schemas.py
+```mermaid
+erDiagram
+    COMPANY ||--o{ CORPORATE_ACCOUNT : owns
+    COMPANY ||--o{ LOOKALIKE_ACCOUNT : targeted_by
+    COMPANY ||--o{ THIRD_PARTY_METRICS : referenced_in
+    COMPANY ||--o{ CODED_DOCUMENT : files
+    COMPANY ||--o{ FINANCIAL_MACRO_METRICS : reports
+
+    CORPORATE_ACCOUNT ||--o{ ACCOUNT_SNAPSHOT : observed_at
+    CORPORATE_ACCOUNT ||--|| PRESENCE_BENCHMARK_CODING : evaluated_by
+
+    AUDIT_EVIDENCE ||--o{ ACCOUNT_SNAPSHOT : verifies
+    AUDIT_EVIDENCE }o--|| RESEARCH_TOOLING : generated_by
+
+    CODED_DOCUMENT ||--o{ THEMATIC_SEGMENT_CODING : contains
+    THEMATIC_CODE_RUBRIC ||--o{ THEMATIC_SEGMENT_CODING : categorizes
 ```
-*Output: `✅ ALL SCHEMAS & EVIDENCE SHA-256 CHECKS PASSED (F7 Compliant)`*
 
-### 3. Compute Inter-Coder Reliability (F4)
+Seluruh definisi tipe data, foreign key, constraint integritas, dan skrip DDL SQL tersedia pada dokumentasi [docs/ERD.md](docs/ERD.md).
+
+---
+
+## 🚀 Cara Menjalankan Aplikasi & Replikasi Analisis
+
+### 1. Menjalankan Dashboard Interaktif Streamlit
 ```bash
-python scripts/compute_krippendorff.py
+streamlit run app.py --server.port 8503
 ```
-*Output:*
-- Comparison Accounts Typology (N=20): **Krippendorff's $\alpha = 0.9251$ (Robust $\ge 0.80$)**
-- Document Thematic Coding (N=5): **Krippendorff's $\alpha = 1.0000$ (Robust $\ge 0.80$)**
+Akses dashboard di browser: `http://localhost:8503`  
+*Fitur lengkap:*
+1. 🧊 Branding Iceberg Matrix (Sunburst & Bobot 10% vs 90%)
+2. 🤫 Silent Authority Index (SAI) Calculator Interaktif
+3. 📱 Observasi Digital TikTok (@nvidia vs @nvidiageforce vs GTC)
+4. 📈 Finansial vs Vanity Metrics (FY21–FY26 Dual Axis Chart)
+5. ⚖️ Gap Analysis Explorer (Tabel 2 Makalah)
+6. 🛡️ Simulator Protokol Krisis RHWR
+7. 📄 Makalah IPSSJ 2026 & Pengunduh PDF Resmi
+8. 🔬 Katalog Reproduktibilitas 12 Alat Riset
+9. 📊 Dataset Multi-Kasus, Visualisasi H1–H4, & Pembaca Naskah Q1
 
-### 4. Execute Full Empirical Analysis & Generate Figures/Tables (F6)
-```bash
-python scripts/run_analysis.py
-```
-*Generates:*
-- `paper/tables/table1_presence_distribution.csv`
-- `paper/tables/table2_lookalike_summary.csv`
-- `paper/tables/table3_third_party_compensation.csv`
-- `paper/tables/table4_hypothesis_test_results.csv`
-- `paper/figures/figure1_longitudinal_trajectory.png`
-- `paper/figures/figure2_presence_by_sector.png`
-- `paper/figures/figure3_third_party_volume.png`
-
-### 5. Run Automated Test Suite
+### 2. Menjalankan Uji Otomatis Pytest (12/12 Tests)
 ```bash
 pytest tests/ -v
 ```
 
+### 3. Validasi Integritas Data & SHA-256 Hash
+```bash
+python scripts/validate_schemas.py
+```
+
+### 4. Eksekusi Analisis End-to-End & Regenerasi Gambar Naskah
+```bash
+python scripts/run_analysis.py
+```
+
 ---
 
-## 📊 Data Availability Statement
-The complete data collection, processing scripts, raw evidence screenshots, and statistical notebooks are openly accessible in this GitHub repository and permanently archived with a persistent DOI on **Zenodo** (`10.5281/zenodo.10260000`) under the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** license.
+## 📚 Format Sitasi Ilmiah
 
----
+### Naskah Jurnal Terbitan IPSSJ (2026)
+```text
+Sari, I. A. K., Prasetio, A. B., & Subroto, W. T. (2026). Silent Authority dan Paradigma Branding Iceberg: Analisis Strategi Komunikasi Digital NVIDIA di Platform TikTok dalam Era Marketing 5.0. Integrative Perspectives of Social and Science Journal (IPSSJ), 3(9), 1-12.
+```
 
-## 📖 Citation Format
+### Draf Naskah Multi-Kasus & Dataset (Q1 Target)
 ```bibtex
 @dataset{kartikasari2026silent,
   author    = {Kartika Sari, Indri Anjar and Prasetio, Agung Budi and Subroto, Waspodo Tjipto},
@@ -144,6 +202,6 @@ The complete data collection, processing scripts, raw evidence screenshots, and 
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.10260000},
-  url       = {https://github.com/indri007/silent-authority-tiktok-dataset}
+  url       = {https://github.com/indri007/NVIDIA}
 }
 ```

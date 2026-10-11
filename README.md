@@ -35,6 +35,24 @@ This repository elevates the study of NVIDIA's verified zero-upload presence (`@
 
 ---
 
+## 🛠️ Matriks Pemilihan Alat & Metodologi Riset (Methodological Protocol)
+
+Untuk menjamin kepatuhan etika dan transparansi penuh bagi reviewer jurnal Q1, instrumen riset dipilih berdasarkan pertimbangan keterulangan yang ketat (lihat detail lengkap di [METHODOLOGICAL_PROTOCOL.md](METHODOLOGICAL_PROTOCOL.md)):
+
+| Kebutuhan Riset | Alat / Metode yang Dipilih | Alasan & Rasionalisasi Metodologis |
+| :--- | :--- | :--- |
+| **Pengambilan Data TikTok** | **4CAT + Zeeschuimer** | Dibuat khusus untuk riset sosial digital. Data diambil dari browser peneliti sendiri tanpa memerlukan izin API khusus atau scraping agresif. |
+| **Akses Peneliti Resmi** | **TikTok Research API Wrapper** | Jalur resmi paling kredibel di mata reviewer. *(Catatan: memerlukan izin akses resmi akademisi dari TikTok).* |
+| **Bukti Audit Snapshot** | **ArchiveBox + Tangkapan Layar Manual + Hash SHA-256** | Menghasilkan arsip bertanggal dan rekaman visual *tamper-proof* yang tercatat di `evidence/hashes.sha256`. |
+| **Pencacahan Akun Tiruan** | **Pencarian Manual Terstruktur (TikTok)** | Penelusuran kata kunci manual dengan kriteria tertulis di `codebook.md`. *(Catatan: `dnstwist` hanya sebagai pembanding domain).* |
+| **Pelacakan Google Trends** | **Ekspor CSV Manual dari Situs Google Trends** | Lebih aman dan terverifikasi daripada *pytrends* yang tidak resmi. *Pytrends* disimpan sebagai alternatif data masif. |
+| **Pengodean Kualitatif** | **Spreadsheet / CSV Terstruktur dengan Codebook** | Cukup dan transparan untuk sampel 15–30 korporasi pembanding serta segmen dokumen korporat kunci. |
+| **Uji Reliabilitas Koder** | **fast-krippendorff (Python)** | Menghitung *Krippendorff’s Alpha* ($\alpha \ge 0.70$ / $0.80$) untuk reliabilitas antar-koder independen. |
+| **Pemodelan Topik Teks** | **BERTopic** | Topic modeling berbasis transformer untuk analisis narasi tagar pihak ketiga dan transkrip panjang. |
+| **Rilis Data Terbuka** | **GitHub + Zenodo + Datasheet for Datasets** | Menghasilkan *Digital Object Identifier* (DOI) permanen dan dokumentasi transparan berstandar internasional. |
+
+---
+
 ## 📂 Repository Structure
 
 ```text
